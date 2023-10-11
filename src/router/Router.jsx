@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom"
 import Header from "../components/general/header/Header"
 import Error from "../components/pages/error/Error"
-import Home from "../components/pages/home/Home"
+import App from "../components/App"
 
 const Router = createBrowserRouter([
   {
@@ -11,7 +11,7 @@ const Router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
+        element: <App />
       }
     ]
   }
