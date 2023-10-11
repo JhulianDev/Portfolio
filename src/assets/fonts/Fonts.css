@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Against Regular';
+  src: url('./against-regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Nunito Regular';
+  src: url('./nunito-regular.otf') format('opentype');
+}
