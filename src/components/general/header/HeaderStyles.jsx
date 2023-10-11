@@ -16,6 +16,7 @@ export const HeaderContainer = styled.header`
   position: fixed;
   inset: auto 0 40px 0;
   margin: auto;
+  z-index: 10;
 
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.233);

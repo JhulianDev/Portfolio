@@ -5,7 +5,8 @@ import Arrow from "../../../assets/svg/arrow.svg"
 
 const Header = () => {
   const [itemActive, setItemActive] = useState("Home")
-  const items = ['Home', 'Proyects', 'Skills', 'About me', 'Contact'];
+  // const items = ['Home', 'Proyects', 'Skills', 'About me', 'Contact'];
+  const items = ['Home', 'Proyects', 'Skills'];
 
   return (
     <>
