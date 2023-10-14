@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import { ArrowIcon, DownloadButton, DownloadText, HeaderContainer, Item, ItemLink, List, Navbar } from "./HeaderStyles";
-import Arrow from "../../../assets/svg/arrow.svg"
+import DOWNLOAD_ICON from "../../../assets/svg/Download-icon.svg"
 
 const Header = () => {
   const [itemActive, setItemActive] = useState("Home")
@@ -25,7 +25,7 @@ const Header = () => {
         
         <DownloadButton>
           <DownloadText>Curriculum</DownloadText>
-          <ArrowIcon src={Arrow} />
+          <ArrowIcon src={DOWNLOAD_ICON} />
         </DownloadButton>
       </HeaderContainer>
 
