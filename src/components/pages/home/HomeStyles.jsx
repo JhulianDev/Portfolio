@@ -114,8 +114,8 @@ export const LightBlue = styled.span`
 
 export const LightPurple = styled.span`
   background-color: ${colors.lightPurple};
-  width: 800px;
-  height: 800px;
+  width: 700px;
+  height: 700px;
   border-radius: 1000px;
   filter: blur(200px);
 
@@ -124,13 +124,13 @@ export const LightPurple = styled.span`
   bottom: -400px;
 
   @media screen and (max-width: 1440px){
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
   }
 
-  @media screen and (max-width: 1080px){
-    width: 500px;
-    height: 500px;
+  @media screen and (max-width: 820px){
+    width: 480px;
+    height: 480px;
   }
 `
 
@@ -146,15 +146,14 @@ export const LightTurquoise = styled.span`
   bottom: 130px;
 
   @media screen and (max-width: 1440px){
-    width: 280px;
-    height: 130px;
+    width: 250px;
+    height: 100px;
     right: 15px;
-    bottom: 90px;
+    bottom: 130px;
+    filter: blur(70px);
   }
 
   @media screen and (max-width: 1080px){
-    width: 260px;
-    height: 110px;
     right: 12px;
     bottom: 80px;
   }
@@ -222,7 +221,6 @@ export const Description = styled.p`
     font-size: 3vw;
     text-align: center;
     max-width: 69%;
-    margin-bottom: 40px;
   }
 
   @media screen and (max-width: 525px){
