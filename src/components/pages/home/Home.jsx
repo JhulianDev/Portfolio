@@ -1,5 +1,6 @@
+import { MaxWidth, Section } from '../../general/styles/generalStyles';
+import { LightBlue, LightPurple, Greeting, TextsContainer, Presentation, BoxPresentation, Role, Description, IllustrationsContainer, AstronautImg, MoonImg, LightMoon, StarsImg, ContactButton, LightTurquoise } from './HomeStyles';
 import { colors } from '../../../assets/colors/Colors';
-import { LightBlue, LightPurple, Section, Greeting, TextsContainer, Presentation, BoxPresentation, Role, Description, IllustrationsContainer, AstronautImg, MoonImg, MaxWidth, LightMoon, StarsImg, ContactButton, LightTurquoise } from './HomeStyles';
 import ASTRONAUT from '../../../assets/img/Astronaut.png'
 import MOON from '../../../assets/img/Moon.png'
 import STARS from '../../../assets/img/Stars.png'
@@ -7,8 +8,11 @@ import STARS from '../../../assets/img/Stars.png'
 const Home = () => {
   return (
     <Section>
+      
+      <LightPurple />
+      <LightBlue />
+
       <MaxWidth>
-        <LightBlue />
 
         <TextsContainer>
           <Greeting>Hi!</Greeting>
@@ -31,7 +35,7 @@ const Home = () => {
           <LightTurquoise />
         </IllustrationsContainer>
 
-        <LightPurple />
+
       </MaxWidth>
     </Section>
   );
