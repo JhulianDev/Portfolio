@@ -1,5 +1,6 @@
 import Header from "../../general/header/Header";
-import { Section, Title } from "./ErrorStyles";
+import { Section } from "../../general/styles/generalStyles";
+import { Title } from "./ErrorStyles";
 
 const Error404 = () => {
   return (
