@@ -1,12 +1,13 @@
 import styled, { css } from "styled-components"
-import { fonts } from "../../../assets/fonts/fontsHandler"
+import { colors } from "../../../assets/colors/Colors"
 
 export const Section = styled.section`
   width: 100%;
   min-height: 100vh;
-  padding: 0px 120px;
+  padding: 60px 120px;
   position: relative;
   overflow: hidden;
+  gap: 20px;
 
   display: flex;
   flex-direction: column;
@@ -24,7 +25,7 @@ export const MaxWidth = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: ${(props) => props.$justify || "space-between"} ;
 
   @media screen and (max-width: 820px){
     flex-direction: column;
@@ -33,20 +34,41 @@ export const MaxWidth = styled.div`
   }
 `
 
-export const TitleSection = styled.h1`
-  font-family: ${fonts.MainTypography};
-  color: white;
-  font-size: calc(2vw + 1.6rem);
-  font-weight: 100;
-  text-align: center;
-  margin-bottom: 60px;
-  margin-top: -100px;
+export const Light = styled.span`
+  width: 600px;
+  height: 600px;
+  border-radius: 1000px;
+  filter: blur(200px);
+  position: absolute;
+  opacity: ${(props) => props.$opacity || "1"};
+  z-index: -1;
 
-  @media screen and (max-width: 1440px){
-    margin-bottom: 40px;
+  background-color: ${(props) => 
+    props.$blue ? `${colors.lightBlue}` : 
+    props.$purple ? `${colors.lightPurple}` : 
+    props.$turquoise ? `${colors.lightTurquoise}` : "white"} 
+  ;
+
+  ${(props) => 
+    props.$left ? css`
+      left: -400px;
+    ` : 
+    props.$right ? css`
+      right: -400px;
+    ` : ''
+  }
+
+  ${(props) => 
+    props.$top ? css`
+      top: -400px;
+    ` : 
+    props.$bottom ? css`
+      bottom: -400px;
+    ` : ''
   }
 
   @media screen and (max-width: 820px){
-    margin-top: -60px;
+    width: 480px;
+    height: 480px;
   }
 `
