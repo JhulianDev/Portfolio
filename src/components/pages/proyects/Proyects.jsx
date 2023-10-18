@@ -1,5 +1,5 @@
-import { MaxWidth, Section, TitleSection } from "../../general/styles/generalStyles";
-import { Arrow, BoxArrows, BoxSlider, LightBlue, LightPurple, PlanetBlue, PlanetPurple, Slider } from "./ProyectsStyles";
+import { Light, MaxWidth, Section } from "../../general/styles/generalStyles";
+import { Arrow, BoxArrows, BoxSlider, PlanetBlue, PlanetPurple, Slider, TitleSection } from "./ProyectsStyles";
 import { colors } from "../../../assets/colors/Colors";
 import AISMABA_LOGO from "../../../assets/img/Aismaba-logo.png"
 import PORTFOLIO_LOGO from "../../../assets/img/Portfolio-logo.png"
@@ -14,9 +14,10 @@ const Proyects = () => {
   const { positionSlider, moveRight, moveLeft } = useSliderHandler();
   return (
     <Section>
+      <Light $purple $left $top />
+      <Light $blue $right $bottom />
+      <Light $turquoise $left $bottom $opacity=".5" />
       <TitleSection>My Proyects</TitleSection>
-      <LightPurple />
-      <LightBlue />
       <MaxWidth>
         <PlanetPurple src={PLANET_PURPLE} alt="Planet Purple" />
 
@@ -57,7 +58,7 @@ const Proyects = () => {
         <PlanetBlue src={PLANET_BLUE} alt="Planet Blue" />
 
       </MaxWidth>
-      
+
       <BoxArrows>
         <Arrow src={ARROW_ICON} alt="Arrow Icon" $left onClick={moveLeft} />
         <Arrow src={ARROW_ICON} alt="Arrow Icon" onClick={moveRight} />
