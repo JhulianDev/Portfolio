@@ -96,44 +96,6 @@ export const MaxWidth = styled.div`
   }
 `
 
-export const LightBlue = styled.span`
-  background-color: ${colors.lightBlue};
-  width: 60%;
-  height: 300px;
-  border-radius: 100%;
-  filter: blur(80px);
-
-  position: absolute;
-  top: -150px;
-  right: -20%;
-
-  @media screen and (max-width: 1440px){
-    height: 200px;
-  }
-`
-
-export const LightPurple = styled.span`
-  background-color: ${colors.lightPurple};
-  width: 700px;
-  height: 700px;
-  border-radius: 1000px;
-  filter: blur(200px);
-
-  position: absolute;
-  left: -400px;
-  bottom: -400px;
-
-  @media screen and (max-width: 1440px){
-    width: 600px;
-    height: 600px;
-  }
-
-  @media screen and (max-width: 820px){
-    width: 480px;
-    height: 480px;
-  }
-`
-
 export const LightTurquoise = styled.span`
   background-color: ${colors.lightTurquoise};
   width: 300px;
@@ -177,20 +139,13 @@ export const TextsContainer = styled.div`
   gap: 10px;
   z-index: 1;
 
+  @media screen and (max-width: 1440px){
+    margin-top: -60px;
+  }
+
   @media screen and (max-width: 820px){
     width: 100%;
     align-items: center;
-  }
-`
-
-export const Greeting = styled.h1`
-  ${paragraphStyles}
-  font-size: 2.8vw;
-  margin-bottom: -8px;
-
-  @media screen and (max-width: 820px){
-    font-size: 1.6rem;
-    font-size: 5vw;
   }
 `
 
@@ -201,6 +156,14 @@ export const BoxPresentation = styled.div`
 
 export const Presentation = styled.h2`
   ${titleStyles}
+`
+
+export const Name = styled.h2`
+  ${titleStyles}
+
+  @media screen and (max-width: 820px){
+    margin-left: -8px;
+  }
 `
 
 export const Role = styled.h3`

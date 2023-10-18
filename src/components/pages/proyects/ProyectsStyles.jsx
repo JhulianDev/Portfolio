@@ -1,42 +1,23 @@
 import styled from "styled-components"
-import { colors } from "../../../assets/colors/Colors"
+import { fonts } from "../../../assets/fonts/fontsHandler"
 
-export const LightPurple = styled.span`
-  background-color: ${colors.lightPurple};
-  width: 700px;
-  height: 700px;
-  border-radius: 1000px;
-  filter: blur(200px);
-
-  position: absolute;
-  left: -400px;
-  top: -400px;
+export const TitleSection = styled.h1`
+  font-family: ${fonts.MainTypography};
+  color: white;
+  font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: -100px;
 
   @media screen and (max-width: 1440px){
-    width: 600px;
-    height: 600px;
+    font-size: 2.6rem;
+    margin-bottom: 30px;
   }
 
   @media screen and (max-width: 820px){
-    width: 480px;
-    height: 480px;
-  }
-`
-
-export const LightBlue = styled.span`
-  background-color: ${colors.lightBlue};
-  width: 600px;
-  height: 600px;
-  border-radius: 1000px;
-  filter: blur(200px);
-
-  position: absolute;
-  right: -400px;
-  bottom: -400px;
-
-  @media screen and (max-width: 820px){
-    width: 480px;
-    height: 480px;
+    font-size: 1.9rem;
+    margin-bottom: 20px;
   }
 `
 
