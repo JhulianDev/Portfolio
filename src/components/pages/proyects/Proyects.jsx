@@ -7,8 +7,8 @@ import NOTESLAB_LOGO from "../../../assets/img/Noteslab-logo1.png"
 import PLANET_PURPLE from "../../../assets/img/Planet-purple.png"
 import PLANET_BLUE from "../../../assets/img/Planet-blue.png"
 import ARROW_ICON from "../../../assets/svg/Arrow-icon.svg"
-import CardProyect from "../../general/card/CardProyect";
 import useSliderHandler from "../../../hooks/useSliderHandler";
+import CardProyect from "../../general/cards/cardProyect/CardProyect";
 
 const Proyects = () => {
   const { positionSlider, moveRight, moveLeft } = useSliderHandler();
