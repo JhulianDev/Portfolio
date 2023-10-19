@@ -7,6 +7,11 @@ const titleStyles = css`
   font-family: ${fonts.MainTypography};
   font-size: calc(2vw + .7rem);
   font-weight: 100;
+  line-height: 2.9rem;
+
+  @media screen and (max-width: 1440px){
+    line-height: 2.2rem;
+  }
 
   @media screen and (max-width: 820px){
     font-size: calc(2vw + .9rem);
@@ -16,7 +21,7 @@ const titleStyles = css`
 
   @media screen and (max-width: 525px){
     font-size: calc(2vw + .8rem);
-    line-height: 1.5rem;
+    line-height: 1.4rem;
   }
 
   @media screen and (max-width: 375px){
@@ -146,6 +151,7 @@ export const TextsContainer = styled.div`
   @media screen and (max-width: 820px){
     width: 100%;
     align-items: center;
+    margin-top: 20px;
   }
 `
 
@@ -173,7 +179,11 @@ export const Role = styled.h3`
 export const Description = styled.p`
   ${paragraphStyles}
   font-size: 2vw;
-  max-width: 94%;
+  line-height: 2.5rem;
+
+  @media screen and (max-width: 1440px){
+    line-height: 1.9rem;
+  }
 
   @media screen and (max-width: 1080px){
     max-width: 90%;
@@ -189,6 +199,7 @@ export const Description = styled.p`
   @media screen and (max-width: 525px){
     font-size: .9rem;
     max-width: 280px;
+    line-height: 1.2rem;
   }
 
   @media screen and (max-width: 375px){

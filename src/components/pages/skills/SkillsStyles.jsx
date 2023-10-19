@@ -52,12 +52,9 @@ export const TitleSection = styled.h1`
   }
 
   @media screen and (max-width: 820px){
-    margin-top: -60px;
-    margin-bottom: 0px;
-  }
-
-  @media screen and (max-width: 425px){
     font-size: 1.9rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 `
 

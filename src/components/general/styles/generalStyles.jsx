@@ -17,6 +17,11 @@ export const Section = styled.section`
   @media screen and (max-width: 1080px){
     padding: 60px 60px;
   }
+
+  @media screen and (max-width: 820px){
+    padding: 60px 60px;
+    min-height: auto;
+  }
 `
 
 export const MaxWidth = styled.div`
