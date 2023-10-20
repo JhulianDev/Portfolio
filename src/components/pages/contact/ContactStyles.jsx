@@ -103,7 +103,6 @@ export const StarsImg = styled.img`
   animation-delay: ${(props) => props.$delay || "1s"};
 
   @media screen and (max-width: 820px){
-    /* width: 115%; */
     display: none;
   }
 `
@@ -177,7 +176,7 @@ export const TitleSection = styled.h1`
 
   @media screen and (max-width: 820px){
     font-size: 1.9rem;
-    margin-top: 0;
+    margin-top: -30px;
   }
 `
 
