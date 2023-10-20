@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import styled, { css, keyframes } from "styled-components"
 import { colors } from "../../../assets/colors/Colors"
 
 export const Section = styled.section`
@@ -39,13 +39,49 @@ export const MaxWidth = styled.div`
   }
 `
 
+// export const Light = styled.span`
+//   width: 600px;
+//   height: 600px;
+//   border-radius: 1000px;
+//   filter: blur(200px);
+//   position: absolute;
+//   opacity: ${(props) => props.$opacity || "1"};
+//   z-index: -1;
+
+//   background-color: ${(props) => 
+//     props.$blue ? `${colors.lightBlue}` : 
+//     props.$purple ? `${colors.lightPurple}` : 
+//     props.$turquoise ? `${colors.lightTurquoise}` : "white"} 
+//   ;
+
+//   ${(props) => 
+//     props.$left ? css`
+//       left: -400px;
+//     ` : 
+//     props.$right ? css`
+//       right: -400px;
+//     ` : ''
+//   }
+
+//   ${(props) => 
+//     props.$top ? css`
+//       top: -400px;
+//     ` : 
+//     props.$bottom ? css`
+//       bottom: -400px;
+//     ` : ''
+//   }
+
+//   @media screen and (max-width: 820px){
+//     width: 480px;
+//     height: 480px;
+//   }
+// `
+
 export const Light = styled.span`
-  width: 600px;
-  height: 600px;
+  aspect-ratio: 1/1;
   border-radius: 1000px;
-  filter: blur(200px);
   position: absolute;
-  opacity: ${(props) => props.$opacity || "1"};
   z-index: -1;
 
   background-color: ${(props) => 
@@ -53,27 +89,38 @@ export const Light = styled.span`
     props.$purple ? `${colors.lightPurple}` : 
     props.$turquoise ? `${colors.lightTurquoise}` : "white"} 
   ;
+  
+  width: ${(props) => props.$size || ""};
+  filter: blur(${(props) => `calc(${props.$size} / 3)` || ""});
+  opacity: ${(props) => props.$opacity || "1"};
 
-  ${(props) => 
-    props.$left ? css`
-      left: -400px;
-    ` : 
-    props.$right ? css`
-      right: -400px;
-    ` : ''
+  left: ${(props) => props.$left ? `calc(-${props.$size} / 2)` : ""};
+  right: ${(props) => props.$right ? `calc(-${props.$size} / 2)` : ""};
+  top: ${(props) => props.$top ? `calc(-${props.$size} / 2)` : ""};
+  bottom: ${(props) => props.$bottom ? `calc(-${props.$size} / 2)` : ""};
+
+  @media screen and (max-width: 1550px){
+    transform: scale(.7);
   }
-
-  ${(props) => 
-    props.$top ? css`
-      top: -400px;
-    ` : 
-    props.$bottom ? css`
-      bottom: -400px;
-    ` : ''
-  }
-
+  
   @media screen and (max-width: 820px){
-    width: 480px;
-    height: 480px;
+    transform: scale(.6);
+  }
+
+  @media screen and (max-width: 425px){
+    transform: scale(.5);
+    opacity: .3;
+  }
+`
+
+export const levitate = keyframes`
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
   }
 `

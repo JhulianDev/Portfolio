@@ -14,9 +14,9 @@ const Proyects = () => {
   const { positionSlider, moveRight, moveLeft } = useSliderHandler();
   return (
     <Section>
-      <Light $purple $left $top />
-      <Light $blue $right $bottom />
-      <Light $turquoise $left $bottom $opacity=".5" />
+      <Light $size="500px" $opacity=".8" $purple $left $top />
+      <Light $size="550px" $blue $right $bottom />
+      <Light $size="550px" $opacity=".5" $turquoise $left $bottom  />
       <TitleSection>My Proyects</TitleSection>
       <MaxWidth>
         <PlanetPurple src={PLANET_PURPLE} alt="Planet Purple" />

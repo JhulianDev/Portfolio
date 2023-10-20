@@ -6,8 +6,8 @@ import { BoxCards, CardPortrait, TitleSection } from "./AboutMeStyles";
 const AboutMe = () => {
   return (
     <Section>
-      <Light $left $top $blue />
-      <Light $right $bottom $blue />
+      <Light $size="550px" $left $top $blue />
+      <Light $size="550px" $right $bottom $blue />
       <TitleSection>About Me</TitleSection>
       <MaxWidth>
         <BoxCards>

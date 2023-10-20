@@ -8,8 +8,8 @@ import STARS from '../../../assets/img/Stars.png'
 const Home = () => {
   return (
     <Section>
-      <Light $purple $left $bottom />
-      <Light $blue $right $top />
+      <Light $size="500px" $opacity=".8" $purple $left $bottom />
+      <Light $size="550px" $blue $right $top />
       <MaxWidth>
 
         <TextsContainer>

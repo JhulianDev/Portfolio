@@ -11,9 +11,9 @@ const Skills = () => {
 
   return (
     <Section>
-      <Light $turquoise $left $top $opacity=".5" />
-      <Light $blue $right $top />
-      <Light $blue $left $bottom />
+      <Light $size="550px" $turquoise $left $top $opacity=".5" />
+      <Light $size="550px" $blue $right $top />
+      <Light $size="550px" $blue $left $bottom />
       <TitleSection>My Skills</TitleSection>
       <MaxWidth>
 
