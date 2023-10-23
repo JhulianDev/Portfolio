@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useForm } from '@formspree/react';
+import useFormHandler from '../../../hooks/useFormHandler';
 import { Light, MaxWidth, Section } from '../../general/styles/generalStyles';
 import { AstronautImg, BoxImg, ButtonForm, CardContact, Form, Input, StarsImg, TextArea, TitleSection } from './ContactStyles';
 import ASTRONAUT_CONTACT from "../../../assets/svg/AstronautContact.svg"
@@ -7,6 +9,16 @@ import STARS_B from "../../../assets/svg/Stars-2.svg"
 import STARS_C from "../../../assets/svg/Stars-3.svg"
 
 const Contact = () => {
+  const [formData, setFormData] = useState({ name: "", email: "", country: "", subject: "", message: "" });
+  const [state, handleSubmit] = useForm("xrgwjgww");
+  const { formHandler, submittedForm } = useFormHandler();
+
+  useEffect(() => {
+    if (state.succeeded) {
+      submittedForm(setFormData);
+    }
+  }, [state.succeeded]);
+
   return (
     <Section>
       <TitleSection>Contact me</TitleSection>
@@ -25,14 +37,16 @@ const Contact = () => {
             <Light $size="200px" $turquoise />
           </BoxImg>
 
-          <Form>
+          <Form onSubmit={(e) => formHandler(e, formData, handleSubmit)} noValidate>
             <Light $size="200px" $bottom $blue />
-            <Input type="text" name="name" placeholder="Name" />
-            <Input type="email" name="email" placeholder="Email" />
-            <Input type="text" name="country" placeholder="Country" />
-            <Input type="text" name="subject" placeholder="Subject" />
-            <TextArea name='message' placeholder='Message' />
-            <ButtonForm>Send</ButtonForm>
+            <Input type="text" name="name" placeholder="Name" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
+            <Input type="email" name="email" placeholder="Email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+            <Input type="text" name="country" placeholder="Country" value={formData.country} onChange={(e) => setFormData({ ...formData, country: e.target.value })} />
+            <Input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })} />
+            <TextArea name='message' placeholder='Message' value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
+            <ButtonForm type="submit" disabled={state.submitting}>
+              {state.submitting ? 'Sending...' : 'Send'}
+            </ButtonForm>
           </Form>
 
           <Light $size="200px" $bottom $left $purple $opacity=".7" />
