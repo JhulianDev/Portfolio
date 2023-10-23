@@ -398,10 +398,33 @@ b {
    ========================================================================== */
 
 body::-webkit-scrollbar {
-  width: 12px;
-  background-color: #2848a1;
+  background-color: #16093D;
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  margin-block: 6px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #000763;
+  background-color: #426ad894;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #426ad8d2;
+}
+
+/* ----------------------- SweetAlert Colors ----------------------- */
+
+/* Success icon */
+.swal2-icon.swal2-success,
+.swal2-icon.swal2-success .swal2-success-ring,
+.swal2-icon.swal2-success .swal2-success-ring::before{
+  border-color: #00076346;
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip],
+.swal2-icon.swal2-success [class^=swal2-success-line]{
+  background-color: #2848a1;
 }

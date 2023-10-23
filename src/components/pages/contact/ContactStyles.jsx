@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from "styled-components";
 import { fonts } from "../../../assets/fonts/fontsHandler";
 import { levitate } from "../../general/styles/generalStyles";
+import { colors } from "../../../assets/colors/Colors";
 
 const inputStyles = css`
   background-color: transparent;
@@ -139,6 +140,21 @@ export const TextArea = styled.textarea`
   ${inputStyles};
   height: 80px;
   resize: none;
+
+  &::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: ${colors.bgColor};
+    margin-block: 11px; 
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ffffff8b;
+    border-radius: 10px;
+    border: 4px solid ${colors.bgColor};
+  }
 `
 
 export const ButtonForm = styled.button`
