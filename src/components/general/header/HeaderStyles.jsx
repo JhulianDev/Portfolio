@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styled, { keyframes } from "styled-components"
+import styled, { css, keyframes } from "styled-components"
 
 const animateButton = keyframes`
   0% {
@@ -21,7 +21,6 @@ export const HeaderContainer = styled.header`
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.233);
   backdrop-filter: blur(6.5px);
-  -webkit-backdrop-filter: blur(6.5px);
   padding: 9px 8px;
   border-radius: 100px;
   border-top: 1px solid #ffffff83;
@@ -32,10 +31,36 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 820px){
+    width: 0;
+    opacity: 0;
+    flex-direction: column;
+    inset: 15px auto auto 50%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, .05);
+    border-radius: 10px;
+    padding: 60px;
+    gap: 20px;
+    overflow: hidden;
+    transition: all .3s ease;
+
+    ${props => props.$open && css`
+      width: 95%;
+      opacity: 1;
+    `}
+  }
 `
 
 export const Navbar = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  @media screen and (max-width: 820px){
+    width: 100%;
+  }
 `
 
 export const List = styled.ul`
@@ -44,10 +69,25 @@ export const List = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 10px;
+
+  @media screen and (max-width: 820px){
+    flex-direction: column;
+    width: 100%;
+    gap: 0px;
+  }
 `
 
 export const Item = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
+  @media screen and (max-width: 820px){
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #ffffffb3;
+  }
 `
 
 export const ItemLink = styled(Link)`
@@ -90,6 +130,11 @@ export const ItemLink = styled(Link)`
       opacity: .7;
     }
   `}
+
+  @media screen and (max-width: 820px){
+    padding-top: 9px;
+    width: 100%;
+  }
 `;
 
 
@@ -152,5 +197,9 @@ export const DownloadButton = styled.button`
   &:active{
     transform: scale(.95);
     transition-duration: .1s;
+  }
+
+  @media screen and (max-width: 820px){
+    margin-left: 0;
   }
 `;
