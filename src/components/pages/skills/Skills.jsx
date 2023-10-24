@@ -6,11 +6,11 @@ import EXTERNAL_ICONS from "../../../assets/img/External-icons.png";
 import LuminousButton from "../../general/buttons/luminousButton/LuminousButton";
 import useSkillsHandler from "../../../hooks/useSkillsHandler";
 
-const Skills = () => {
+const Skills = ({ sectionRef }) => {
   const { skills, stacks, stackActive, handleSkills } = useSkillsHandler();
 
   return (
-    <Section>
+    <Section ref={sectionRef}>
       <Light $size="550px" $turquoise $left $top $opacity=".5" />
       <Light $size="550px" $blue $right $top />
       <Light $size="550px" $blue $left $bottom />

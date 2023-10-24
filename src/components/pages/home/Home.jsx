@@ -5,9 +5,9 @@ import ASTRONAUT from '../../../assets/img/Astronaut.png'
 import MOON from '../../../assets/img/Moon.png'
 import STARS from '../../../assets/img/Stars.png'
 
-const Home = () => {
+const Home = ({ sectionRef }) => {
   return (
-    <Section>
+    <Section ref={sectionRef}>
       <Light $size="500px" $opacity=".8" $purple $left $bottom />
       <Light $size="550px" $blue $right $top />
       <MaxWidth>

@@ -10,10 +10,10 @@ import ARROW_ICON from "../../../assets/svg/Arrow-icon.svg"
 import useSliderHandler from "../../../hooks/useSliderHandler";
 import CardProyect from "../../general/cards/cardProyect/CardProyect";
 
-const Proyects = () => {
+const Proyects = ({ sectionRef }) => {
   const { positionSlider, moveRight, moveLeft } = useSliderHandler();
   return (
-    <Section>
+    <Section ref={sectionRef}>
       <Light $size="500px" $opacity=".8" $purple $left $top />
       <Light $size="550px" $blue $right $bottom />
       <Light $size="550px" $opacity=".5" $turquoise $left $bottom  />

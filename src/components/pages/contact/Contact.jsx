@@ -8,7 +8,7 @@ import STARS_A from "../../../assets/svg/Stars-1.svg"
 import STARS_B from "../../../assets/svg/Stars-2.svg"
 import STARS_C from "../../../assets/svg/Stars-3.svg"
 
-const Contact = () => {
+const Contact = ({ sectionRef }) => {
   const [formData, setFormData] = useState({ name: "", email: "", country: "", subject: "", message: "" });
   const [state, handleSubmit] = useForm("xrgwjgww");
   const { formHandler, submittedForm } = useFormHandler();
@@ -20,7 +20,7 @@ const Contact = () => {
   }, [state.succeeded]);
 
   return (
-    <Section>
+    <Section ref={sectionRef}>
       <TitleSection>Contact me</TitleSection>
       <Light $size="550px" $top $right $blue />
       <Light $size="550px" $bottom $left $turquoise $opacity=".8" />
