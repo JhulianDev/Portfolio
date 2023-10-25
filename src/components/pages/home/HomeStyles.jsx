@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components"
 import { colors } from "../../../assets/colors/Colors"
 import { fonts } from "../../../assets/fonts/fontsHandler"
+import { Link } from "react-router-dom"
 
 const titleStyles = css`
   color: ${(props) => props.$color || "white"};
@@ -208,15 +209,23 @@ export const Description = styled.p`
   }
 `
 
-export const ContactButton = styled.button`
+export const ContactButton = styled(Link)`
   background-color: ${colors.lightPurple};
   color: white;
   font-family: Nunito;
   font-size: 1.2rem;
   padding: 12px 35px;
   border-radius: 100px;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
+  transition: all .2s ease;
+
+  &:hover{
+    border: 1px solid #ffffffb2;
+    box-shadow: 0 0 12px #ffffffac;
+    text-shadow: 0 0 10px white;
+    background-color: #7b1ab8;
+  }
 
   @media screen and (max-width: 1440px){
     font-size: 1.1rem;
