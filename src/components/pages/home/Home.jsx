@@ -21,7 +21,7 @@ const Home = ({ sectionRef }) => {
           <Description>
             I am a passionate lover of programming and an enthusiastic graphic designer.
           </Description>
-          <ContactButton>Let's Talk</ContactButton>
+          <ContactButton>Go Linkedin</ContactButton>
         </TextsContainer>
 
         <IllustrationsContainer>
