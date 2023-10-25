@@ -31,15 +31,18 @@ const Proyects = ({ sectionRef }) => {
               colorTop={colors.lightPurple}
               pageLink="https://www.aismaba.com/"
               gitHubLink="https://github.com/JhulianDev/Aismaba"
+              textButton="Go to proyect"
             />
 
             <CardProyect
               title="Professional Portfolio"
               subtitle="Website Personal"
-              description="Web application built with React and Node js. Integration with the Paypal API and MercadoPago API"
+              description="Personal portfolio built with React and StyledComponents. Integration with Formspree for forms management"
               logo={PORTFOLIO_LOGO}
               colorTop={colors.lightBlue}
               colorBottom={colors.lightPurple}
+              pageLink="https://github.com/JhulianDev/Portfolio"
+              textButton="Go to github"
             />
 
             <CardProyect
@@ -51,6 +54,7 @@ const Proyects = ({ sectionRef }) => {
               colorBottom={colors.lightBlue}
               pageLink="https://notes-lab-46y6.vercel.app/"
               gitHubLink="https://github.com/JhulianDev/NotesLab"
+              textButton="Go to proyect"
             />
           </Slider>
         </BoxSlider>
