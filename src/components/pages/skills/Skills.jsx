@@ -22,7 +22,7 @@ const Skills = ({ sectionRef }) => {
 
           {skills.map((skill, index) => (
             <BoxIcon key={`${index}_${skill.title}`} $animationDelay={`${index * 0.4}s`}>
-              <Icon src={skill.icon} />
+              <Icon src={skill.icon} alt={`${skill.title} icon`} />
               <TitleIcon>{skill.title}</TitleIcon>
             </BoxIcon>
           ))}
