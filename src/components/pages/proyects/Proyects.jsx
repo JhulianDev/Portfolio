@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { Light, MaxWidth, Section } from "../../general/styles/generalStyles";
 import { Arrow, BoxArrows, BoxSlider, PlanetBlue, PlanetPurple, Slider, TitleSection } from "./ProyectsStyles";
 import { colors } from "../../../assets/colors/Colors";
@@ -9,11 +10,13 @@ import PLANET_BLUE from "../../../assets/img/Planet-blue.png"
 import ARROW_ICON from "../../../assets/svg/Arrow-icon.svg"
 import useSliderHandler from "../../../hooks/useSliderHandler";
 import CardProyect from "../../general/cards/cardProyect/CardProyect";
+import { RefContext } from "../../../context/RefContext";
 
-const Proyects = ({ sectionRef }) => {
+const Proyects = () => {
+  const { proyectsRef } = useContext(RefContext)
   const { positionSlider, moveRight, moveLeft } = useSliderHandler();
   return (
-    <Section ref={sectionRef}>
+    <Section ref={proyectsRef}>
       <Light $size="500px" $opacity=".8" $purple $left $top />
       <Light $size="550px" $blue $right $bottom />
       <Light $size="550px" $opacity=".5" $turquoise $left $bottom  />

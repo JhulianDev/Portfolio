@@ -1,11 +1,14 @@
+import { useContext } from "react";
 import CardAboutMe from "../../general/cards/cardAboutMe/CardAboutMe";
 import { Light, MaxWidth, Section } from "../../general/styles/generalStyles";
 import ASTRONAUT_PORTRAIT from "../../../assets/img/AstronautPortrait.png";
 import { BoxCards, CardPortrait, TitleSection } from "./AboutMeStyles";
+import { RefContext } from "../../../context/RefContext";
 
-const AboutMe = ({ sectionRef }) => {
+const AboutMe = () => {
+  const { aboutMeRef } = useContext(RefContext)
   return (
-    <Section ref={sectionRef}>
+    <Section ref={aboutMeRef}>
       <Light $size="550px" $left $top $blue />
       <Light $size="550px" $right $bottom $blue />
       <TitleSection>About Me</TitleSection>

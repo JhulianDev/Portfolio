@@ -5,12 +5,15 @@ import INTERNAL_ICONS from "../../../assets/img/Internal-icons.png";
 import EXTERNAL_ICONS from "../../../assets/img/External-icons.png";
 import LuminousButton from "../../general/buttons/luminousButton/LuminousButton";
 import useSkillsHandler from "../../../hooks/useSkillsHandler";
+import { useContext } from "react";
+import { RefContext } from "../../../context/RefContext";
 
-const Skills = ({ sectionRef }) => {
+const Skills = () => {
+  const { skillsRef } = useContext(RefContext)
   const { skills, stacks, stackActive, handleSkills } = useSkillsHandler();
 
   return (
-    <Section ref={sectionRef}>
+    <Section ref={skillsRef}>
       <Light $size="550px" $turquoise $left $top $opacity=".5" />
       <Light $size="550px" $blue $right $top />
       <Light $size="550px" $blue $left $bottom />

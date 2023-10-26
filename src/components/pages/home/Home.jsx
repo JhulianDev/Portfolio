@@ -4,10 +4,13 @@ import { colors } from '../../../assets/colors/Colors';
 import ASTRONAUT from '../../../assets/img/Astronaut.png'
 import MOON from '../../../assets/img/Moon.png'
 import STARS from '../../../assets/img/Stars.png'
+import { RefContext } from '../../../context/RefContext';
+import { useContext } from 'react';
 
-const Home = ({ sectionRef }) => {
+const Home = () => {
+  const { homeRef } = useContext(RefContext)
   return (
-    <Section ref={sectionRef}>
+    <Section ref={homeRef}>
       <Light $size="500px" $opacity=".8" $purple $left $bottom />
       <Light $size="550px" $blue $right $top />
       <MaxWidth>

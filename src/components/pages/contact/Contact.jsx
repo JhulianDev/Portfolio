@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from '@formspree/react';
 import useFormHandler from '../../../hooks/useFormHandler';
 import { Light, MaxWidth, Section } from '../../general/styles/generalStyles';
@@ -7,8 +7,10 @@ import ASTRONAUT_CONTACT from "../../../assets/svg/AstronautContact.svg"
 import STARS_A from "../../../assets/svg/Stars-1.svg"
 import STARS_B from "../../../assets/svg/Stars-2.svg"
 import STARS_C from "../../../assets/svg/Stars-3.svg"
+import { RefContext } from '../../../context/RefContext';
 
-const Contact = ({ sectionRef }) => {
+const Contact = () => {
+  const { contactRef } = useContext(RefContext)
   const [formData, setFormData] = useState({ name: "", email: "", country: "", subject: "", message: "" });
   const [state, handleSubmit] = useForm("xrgwjgww");
   const { formHandler, submittedForm } = useFormHandler();
@@ -20,7 +22,7 @@ const Contact = ({ sectionRef }) => {
   }, [state.succeeded]);
 
   return (
-    <Section ref={sectionRef}>
+    <Section ref={contactRef}>
       <TitleSection>Contact me</TitleSection>
       <Light $size="550px" $top $right $blue />
       <Light $size="550px" $bottom $left $turquoise $opacity=".8" />
