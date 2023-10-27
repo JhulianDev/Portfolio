@@ -107,6 +107,7 @@ export const BoxIllustrations = styled.div`
 
 export const AstronautImg = styled.img`
   width: 100%;
+  backdrop-filter: blur(4px);
   position: absolute;
   animation: ${levitate} 4s ease-in-out infinite;
 `
@@ -147,6 +148,7 @@ export const ContainerIcons = styled.div`
   padding: 40px 30px;
   border: 1px solid #ffffff7f;
   border-radius: 12px;
+  backdrop-filter: blur(3px);
 
   display: flex;
   flex-direction: column;

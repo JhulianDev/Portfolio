@@ -38,6 +38,7 @@ export const BoxCards = styled.div`
 
 export const CardPortrait = styled.img`
   width: 414px;
+  backdrop-filter: blur(3px);
 
   @media screen and (max-width: 1540px){
     width: 300px;

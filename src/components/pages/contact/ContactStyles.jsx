@@ -51,6 +51,7 @@ export const CardContact = styled.div`
   max-width: 1200px;
   border: 1px solid #ffffff92;
   border-radius: 20px;
+  backdrop-filter: blur(6px);
 
   display: flex;
   align-items: center;
@@ -62,7 +63,7 @@ export const CardContact = styled.div`
     flex-direction: column;
     width: 100%;
     padding: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   @media screen and (max-width: 375px){

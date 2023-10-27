@@ -15,6 +15,7 @@ export const BoxButton = styled.button`
   height: 40px;
   border-radius: 100px;
   border: 1px solid #ffffff7f;
+  backdrop-filter: blur(3px);
   position: relative;
   overflow: hidden;
   cursor: pointer;

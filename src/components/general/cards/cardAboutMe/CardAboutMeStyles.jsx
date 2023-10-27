@@ -7,6 +7,7 @@ export const CardBox = styled.div`
   aspect-ratio: 1/1;
   border: 1px solid #ffffff81;
   border-radius: 20px;
+  backdrop-filter: blur(3px);
   padding: 50px;
   position: relative;
   overflow: hidden;
