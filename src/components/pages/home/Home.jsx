@@ -1,14 +1,17 @@
 import { Light, MaxWidth, Section } from '../../general/styles/generalStyles';
-import { TextsContainer, Presentation, BoxPresentation, Role, Description, IllustrationsContainer, AstronautImg, MoonImg, LightMoon, StarsImg, ContactButton, LightTurquoise, Name } from './HomeStyles';
+import { TextsContainer, Presentation, BoxPresentation, Role, Description, IllustrationsContainer, AstronautImg, MoonImg, LightMoon, StarsImg, LightTurquoise, Name, LinkButton } from './HomeStyles';
 import { colors } from '../../../assets/colors/Colors';
 import ASTRONAUT from '../../../assets/img/Astronaut.png'
 import MOON from '../../../assets/img/Moon.png'
 import STARS from '../../../assets/img/Stars.png'
 import { RefContext } from '../../../context/RefContext';
 import { useContext } from 'react';
+import { LanguageContext } from '../../../context/LanguageContext';
 
 const Home = () => {
   const { homeRef } = useContext(RefContext)
+  const { texts } = useContext(LanguageContext)
+  const t = texts.home
   return (
     <Section ref={homeRef}>
       <Light $size="500px" $opacity=".8" $purple $left $bottom />
@@ -17,14 +20,12 @@ const Home = () => {
 
         <TextsContainer>
           <BoxPresentation>
-            <Presentation>Hi! I'm</Presentation>
-            <Name $color={colors.lightPurple}>Jhulian</Name>
+            <Presentation>{t.presentation}</Presentation>
+            <Name $color={colors.lightPurple}>{t.name}</Name>
           </BoxPresentation>
-          <Role>Full Stack Developer</Role>
-          <Description>
-            I am a passionate lover of programming and an enthusiastic graphic designer.
-          </Description>
-          <ContactButton>Go Linkedin</ContactButton>
+          <Role>{t.role}</Role>
+          <Description>{t.description}</Description>
+          <LinkButton>{t.linkedin}</LinkButton>
         </TextsContainer>
 
         <IllustrationsContainer>

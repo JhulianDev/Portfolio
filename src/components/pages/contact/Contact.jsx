@@ -8,9 +8,12 @@ import STARS_A from "../../../assets/svg/Stars-1.svg"
 import STARS_B from "../../../assets/svg/Stars-2.svg"
 import STARS_C from "../../../assets/svg/Stars-3.svg"
 import { RefContext } from '../../../context/RefContext';
+import { LanguageContext } from '../../../context/LanguageContext';
 
 const Contact = () => {
   const { contactRef } = useContext(RefContext)
+  const { texts } = useContext(LanguageContext)
+  const t = texts.contactMe
   const [formData, setFormData] = useState({ name: "", email: "", country: "", subject: "", message: "" });
   const [state, handleSubmit] = useForm("xrgwjgww");
   const { formHandler, submittedForm } = useFormHandler();
@@ -23,7 +26,7 @@ const Contact = () => {
 
   return (
     <Section ref={contactRef}>
-      <TitleSection>Contact me</TitleSection>
+      <TitleSection>{t.titleSection}</TitleSection>
       <Light $size="550px" $top $right $blue />
       <Light $size="550px" $bottom $left $turquoise $opacity=".8" />
       <MaxWidth $justify="center">
@@ -39,15 +42,15 @@ const Contact = () => {
             <Light $size="200px" $turquoise />
           </BoxImg>
 
-          <Form onSubmit={(e) => formHandler(e, formData, handleSubmit)} noValidate>
+          <Form onSubmit={(e) => formHandler(e, formData, handleSubmit, t)} noValidate>
             <Light $size="200px" $bottom $blue />
-            <Input type="text" name="name" placeholder="Name" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
-            <Input type="email" name="email" placeholder="Email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
-            <Input type="text" name="country" placeholder="Country" value={formData.country} onChange={(e) => setFormData({ ...formData, country: e.target.value })} />
-            <Input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })} />
-            <TextArea name='message' placeholder='Message' value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
+            <Input type="text" name="name" placeholder={t.name} value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
+            <Input type="email" name="email" placeholder={t.email} value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+            <Input type="text" name="country" placeholder={t.country} value={formData.country} onChange={(e) => setFormData({ ...formData, country: e.target.value })} />
+            <Input type="text" name="subject" placeholder={t.subject} value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })} />
+            <TextArea name='message' placeholder={t.message} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
             <ButtonForm type="submit" disabled={state.submitting}>
-              {state.submitting ? 'Sending...' : 'Send'}
+              {state.submitting ? `${t.sending}` : `${t.send}`}
             </ButtonForm>
           </Form>
 

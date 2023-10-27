@@ -2,7 +2,7 @@ import Swal from "sweetalert2"
 
 const useFormHandler = () => {
 
-  const formHandler = (e, formData, handleSubmit) => {
+  const formHandler = (e, formData, handleSubmit, t) => {
     // Prevenimos la recarga de la pagina
     e.preventDefault()
     // Obtenemos los datons ingresados en el formulario
@@ -11,8 +11,8 @@ const useFormHandler = () => {
     if (!name || !email || !country || !subject || !message) {
       Swal.fire({
         icon: "info",
-        title: "Atención",
-        text: "Todos los campos son obligatorios",
+        title: `${t.alerts.error}`,
+        text: `${t.alerts.mandatoryText}`,
         showConfirmButton: true
       })
       return
@@ -23,8 +23,8 @@ const useFormHandler = () => {
     if (!emailRegex.test(email)) {
       Swal.fire({
         icon: "info",
-        title: "Atención",
-        text: "El correo ingresado no es válido",
+        title: `${t.alerts.error}`,
+        text: `${t.alerts.invalidMail}`,
         showConfirmButton: true
       })
       return
@@ -40,8 +40,8 @@ const useFormHandler = () => {
     // Se muestra alerta de exito
     Swal.fire({
       icon: "success",
-      title: "Éxito!",
-      text: "Su mensaje fue enviado",
+      title: `${t.alerts.success}`,
+      text: `${t.alerts.succesText}`,
       showConfirmButton: false,
       timer: 2000
     });

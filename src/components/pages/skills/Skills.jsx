@@ -7,9 +7,12 @@ import LuminousButton from "../../general/buttons/luminousButton/LuminousButton"
 import useSkillsHandler from "../../../hooks/useSkillsHandler";
 import { useContext } from "react";
 import { RefContext } from "../../../context/RefContext";
+import { LanguageContext } from "../../../context/LanguageContext";
 
 const Skills = () => {
   const { skillsRef } = useContext(RefContext)
+  const { texts } = useContext(LanguageContext)
+  const t = texts.skills
   const { skills, stacks, stackActive, handleSkills } = useSkillsHandler();
 
   return (
@@ -17,7 +20,7 @@ const Skills = () => {
       <Light $size="550px" $turquoise $left $top $opacity=".5" />
       <Light $size="550px" $blue $right $top />
       <Light $size="550px" $blue $left $bottom />
-      <TitleSection>My Skills</TitleSection>
+      <TitleSection>{t.titleSection}</TitleSection>
       <MaxWidth>
 
         <ContainerIcons>

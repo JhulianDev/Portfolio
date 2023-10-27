@@ -137,7 +137,7 @@ export const LightTurquoise = styled.span`
 `
 
 export const TextsContainer = styled.div`
-  width: 49%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -209,7 +209,7 @@ export const Description = styled.p`
   }
 `
 
-export const ContactButton = styled(Link)`
+export const LinkButton = styled(Link)`
   background-color: ${colors.lightPurple};
   color: white;
   font-family: Nunito;
