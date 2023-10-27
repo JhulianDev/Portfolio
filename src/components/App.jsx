@@ -4,12 +4,12 @@ import Proyects from './pages/proyects/Proyects';
 import Skills from './pages/skills/Skills';
 import AboutMe from './pages/about/AboutMe';
 import Contact from './pages/contact/Contact';
-import Header from './general/header/Header';
+import SpaceParticles from './general/particles/SpaceParticles';
 
 const App = () => {
   return (
     <>
-      <Header />
+      <SpaceParticles />
       <Home />
       <Proyects />
       <Skills />
