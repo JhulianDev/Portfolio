@@ -1,6 +1,6 @@
 <h1 align="center">👋Bienvenid@ a mi Portfolio - Web Personal</h1>
 <h2 align="center">✍ Autor: JhulianDev</h2>
-<h3 align="center">💎 En esta aplicacion web podras encontrar informacion sobre mis proyectos realizados, las tecnologias y lenguajes en los que me desenvuelvo y un poco de mi historia personal.</h3>
+<h3 align="center">💎 En esta aplicacion web podras encontrar informacion sobre mis proyectos realizados, las tecnologias y lenguajes en los que me desenvuelvo y un poco de mi trayectoria profesional.</h3>
 
 <p align="center">💼 Este Porfolio multidiomas a sido diseñado desde cero en Illustrator y a sido construido con React.js y StyledComponents. Ademas cuenta con la Integración de Formspree para la gestión de formularios</p>
 
