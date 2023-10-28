@@ -10,7 +10,9 @@
 
 <h2 align="center">👁‍🗨 Ver este proyecto en vivo: www.jhulian.dev</h2>
 
-<h2 align="center">🌐 Sigueme en: www.linkedin.com/in/jhuliandev</h2>
+<h2 align="center">✉ Contáctame en: jhulian.dev@gmail.com</h2>
+
+<h2 align="center">🌐 Sigueme en: https://linkedin.com/in/jhuliandev</h2>
 
 <h3 align="center">🛑 Prohibido su uso Personal y/o Comercial 🛑</h3>
 
