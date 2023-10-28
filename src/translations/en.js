@@ -6,7 +6,7 @@ import { colors } from "../assets/colors/Colors"
 export const texts_en = {
   header: {
     home: 'Home',
-    proyects: 'Proyects',
+    proyects: 'Projects',
     skills: 'Skills',
     aboutMe: 'About me',
     contact: 'Contact'
@@ -19,7 +19,7 @@ export const texts_en = {
     linkedin: "Go Linkedin"
   },
   proyects: {
-    titleSection: "My Proyects",
+    titleSection: "My Projects",
     cardsProyects: [
       {
         name: "Aismaba",
