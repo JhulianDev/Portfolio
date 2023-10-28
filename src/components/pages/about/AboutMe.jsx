@@ -18,7 +18,7 @@ const AboutMe = () => {
       <MaxWidth>
         <BoxCards>
           <CardAboutMe description={t.descriptionA} />
-          <CardPortrait src={ASTRONAUT_PORTRAIT} />
+          <CardPortrait src={ASTRONAUT_PORTRAIT} alt="Astronaut Portrait" />
           <CardAboutMe description={t.descriptionB} />
         </BoxCards>
       </MaxWidth>
