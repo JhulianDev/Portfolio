@@ -25,7 +25,9 @@ const Home = () => {
           </BoxPresentation>
           <Role>{t.role}</Role>
           <Description>{t.description}</Description>
-          <LinkButton>{t.linkedin}</LinkButton>
+          <LinkButton to="https://www.linkedin.com/in/jhuliandev/" target="_blank">
+            {t.linkedin}
+          </LinkButton>
         </TextsContainer>
 
         <IllustrationsContainer>
