@@ -1,8 +1,8 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { RefContext } from '../../../context/RefContext';
-import { ArrowIcon, DownloadButton, DownloadText, HeaderContainer, Item, ItemLink, List, Navbar } from "./HeaderStyles";
-import DOWNLOAD_ICON from "../../../assets/svg/Download-icon.svg"
+import { DownloadText, GitHubIcon, GitHubLink, HeaderContainer, Item, ItemLink, List, Navbar } from "./HeaderStyles";
+import GITHUB_ICON from "../../../assets/svg/Github-icon.svg"
 import HamburgerButton from '../buttons/hamburguer/HamburgerButton';
 import SwitchLanguage from '../switch/SwitchLanguage';
 
@@ -18,6 +18,10 @@ const Header = () => {
     setSectionActive(id);
     setOpenNav(false);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -37,10 +41,10 @@ const Header = () => {
           </List>
         </Navbar>
 
-        <DownloadButton>
-          <DownloadText>Curriculum</DownloadText>
-          <ArrowIcon src={DOWNLOAD_ICON} />
-        </DownloadButton>
+        <GitHubLink to="https://github.com/JhulianDev" target="_blank">
+          <DownloadText>GitHub</DownloadText>
+          <GitHubIcon src={GITHUB_ICON} />
+        </GitHubLink>
 
       </HeaderContainer>
 
