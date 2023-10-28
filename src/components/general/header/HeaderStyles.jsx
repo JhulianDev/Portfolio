@@ -138,9 +138,9 @@ export const ItemLink = styled(Link)`
 `;
 
 
-export const ArrowIcon = styled.img`
-  height: 60%;
-  margin-left: 6px;
+export const GitHubIcon = styled.img`
+  height: 72%;
+  margin-left: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,12 +152,13 @@ export const DownloadText = styled.span`
   opacity: 0;
   color: white;
   font-family: Nunito;
-  font-size: 1em;
+  font-size: .9rem;
   font-weight: 500;
+  margin-bottom: -1px;
   transition-duration: .6s;
 `
 
-export const DownloadButton = styled.button`
+export const GitHubLink = styled(Link)`
   width: 30px;
   height: 30px;
   margin-left: 10px;
@@ -180,7 +181,7 @@ export const DownloadButton = styled.button`
     transition-duration: .4s;
     gap: 2px;
 
-    ${ArrowIcon} {
+    ${GitHubIcon} {
       padding-right: 15px;
       transition-duration: .1s;
     }
@@ -188,7 +189,7 @@ export const DownloadButton = styled.button`
     ${DownloadText} {
       opacity: 1;
       width: 100%;
-      padding-left: 15px;
+      padding-left: 32px;
       text-shadow: 0 0 20px white;
       transition-duration: .1s;
     }
@@ -200,6 +201,22 @@ export const DownloadButton = styled.button`
   }
 
   @media screen and (max-width: 820px){
+    width: 130px;
+    gap: 2px;
     margin-left: 0;
+
+    ${GitHubIcon} {
+      padding-right: 15px;
+      transition-duration: .1s;
+    }
+
+    ${DownloadText} {
+      opacity: 1;
+      width: 100%;
+      padding-left: 32px;
+      margin-bottom: -3px;
+      text-shadow: 0 0 20px white;
+      transition-duration: .1s;
+    }
   }
 `;

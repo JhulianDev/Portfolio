@@ -2,6 +2,7 @@ import styled, { css } from "styled-components"
 import { colors } from "../../../assets/colors/Colors"
 import { fonts } from "../../../assets/fonts/fontsHandler"
 import { Link } from "react-router-dom"
+import { levitate } from "../../general/styles/generalStyles"
 
 const titleStyles = css`
   color: ${(props) => props.$color || "white"};
@@ -256,6 +257,7 @@ export const IllustrationsContainer = styled.div`
 export const AstronautImg = styled.img`
   width: 450px;
   margin-top: 50px;
+  animation: ${levitate} 4s ease-in-out infinite;
   z-index: 5;
 
   @media screen and (max-width: 1440px){
