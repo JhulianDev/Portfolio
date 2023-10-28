@@ -217,6 +217,7 @@ export const LinkButton = styled(Link)`
   font-size: 1.2rem;
   padding: 12px 35px;
   border-radius: 100px;
+  margin-top: 10px;
   border: 1px solid transparent;
   cursor: pointer;
   transition: all .2s ease;
@@ -230,6 +231,7 @@ export const LinkButton = styled(Link)`
 
   @media screen and (max-width: 1440px){
     font-size: 1.1rem;
+    margin-top: 5px;
   }
 
   @media screen and (max-width: 1080px){
