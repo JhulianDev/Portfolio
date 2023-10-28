@@ -64,7 +64,7 @@ export const texts_en = {
   aboutMe: {
     titleSection: "About Me",
     descriptionA: "Hello! My name is Jhulian Mérida, a FullStack developer based in Argentina. I'm passionate about creating aesthetically pleasing and functional web interfaces that provide effective solutions. I'm constantly expanding my knowledge with new technologies and tools in order to enhance my technological stack and, in the near future, pass on my knowledge to new developers.",
-    descriptionB: "Over the last 2 years, I've had the opportunity to work at a branding agency, where my main role has been the creation and management of the agency's website. Starting from an informative Landing Page to its current evolution as an online store with backend, a database, payment processors, and a login system."
+    descriptionB: "Over the last 1.2 years, I've had the opportunity to work at a branding agency, where my main role has been the creation and management of the agency's website. Starting from an informative Landing Page to its current evolution as an online store with backend, a database, payment processors, and a login system."
   },
   contactMe: {
     titleSection: "Contact Me",
