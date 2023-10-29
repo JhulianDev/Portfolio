@@ -8,7 +8,7 @@ export const texts_es = {
     home: 'Inicio',
     proyects: 'Proyectos',
     skills: 'Habilidades',
-    aboutMe: 'Sobre mi',
+    aboutMe: 'Sobre mí',
     contact: 'Contacto'
   },
   home: {
@@ -67,7 +67,7 @@ export const texts_es = {
     descriptionB: "Durante los últimos 1.2 años, he tenido la oportunidad de trabajar en una agencia de branding, donde mi papel principal ha sido la creación y gestión de la Aplicacion Web de la agencia. Pasando desde una Landing Page informativa a su evolución actual de una tienda online con backend, base de datos, procesadores de pago y sistema de Login."
   },
   contactMe: {
-    titleSection: "Contactame",
+    titleSection: "Contáctame",
     name: "Nombre",
     email: "Correo",
     country: "País",
