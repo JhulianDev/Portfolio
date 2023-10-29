@@ -158,12 +158,24 @@ export const DownloadText = styled.span`
   transition-duration: .6s;
 `
 
-export const GitHubLink = styled(Link)`
+const DelayAnimation = keyframes`
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
+export const ButtonRedirect = styled(Link)`
   width: 30px;
   height: 30px;
   margin-left: 10px;
 
-  display: flex;
+  display: ${(props) => props.$mobile ? "none" : "flex"};
   align-items: center;
   justify-content: flex-start;
 
@@ -201,6 +213,7 @@ export const GitHubLink = styled(Link)`
   }
 
   @media screen and (max-width: 820px){
+    display: ${(props) => props.$mobile ? "flex" : "flex"};
     width: 130px;
     gap: 2px;
     margin-left: 0;
@@ -213,10 +226,20 @@ export const GitHubLink = styled(Link)`
     ${DownloadText} {
       opacity: 1;
       width: 100%;
-      padding-left: 32px;
+      padding-left: ${(props) => props.$mobile ? "25px" : "32px"};;
       margin-bottom: -3px;
       text-shadow: 0 0 20px white;
       transition-duration: .1s;
     }
   }
 `;
+
+export const BoxRedirects = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  @media screen and (max-width: 375px){
+    flex-direction: column;
+  }
+`

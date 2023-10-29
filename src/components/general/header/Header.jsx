@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { RefContext } from '../../../context/RefContext';
-import { DownloadText, GitHubIcon, GitHubLink, HeaderContainer, Item, ItemLink, List, Navbar } from "./HeaderStyles";
+import { BoxRedirects, ButtonRedirect, DownloadText, GitHubIcon, HeaderContainer, Item, ItemLink, List, Navbar } from "./HeaderStyles";
 import GITHUB_ICON from "../../../assets/svg/Github-icon.svg"
+import LINKEDIN_ICON from "../../../assets/svg/LinkedIn-icon.svg"
 import HamburgerButton from '../buttons/hamburguer/HamburgerButton';
 import SwitchLanguage from '../switch/SwitchLanguage';
 
@@ -10,7 +11,7 @@ const Header = () => {
   const { refSections } = useContext(RefContext)
   const [sectionActive, setSectionActive] = useState("Home")
   const [openNav, setOpenNav] = useState(false);
-  
+
   const showNav = () => setOpenNav(!openNav);
 
   const handleNav = (sectionRef, id) => {
@@ -41,10 +42,21 @@ const Header = () => {
           </List>
         </Navbar>
 
-        <GitHubLink to="https://github.com/JhulianDev" target="_blank">
-          <DownloadText>GitHub</DownloadText>
-          <GitHubIcon src={GITHUB_ICON} />
-        </GitHubLink>
+        <BoxRedirects>
+
+          <ButtonRedirect to="https://github.com/JhulianDev" target="_blank">
+            <DownloadText>GitHub</DownloadText>
+            <GitHubIcon src={GITHUB_ICON} alt='GitHub Icon' />
+          </ButtonRedirect>
+
+          <ButtonRedirect to="https://linkedin.com/in/jhuliandev/" target="_blank" $mobile>
+            <DownloadText>LinkedIn</DownloadText>
+            <GitHubIcon src={LINKEDIN_ICON} alt='LinkedIn Icon' />
+          </ButtonRedirect>
+
+        </BoxRedirects>
+
+
 
       </HeaderContainer>
 
