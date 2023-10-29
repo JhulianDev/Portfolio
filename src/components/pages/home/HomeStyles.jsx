@@ -213,7 +213,7 @@ export const Description = styled.p`
 export const LinkButton = styled(Link)`
   background-color: ${colors.lightPurple};
   color: white;
-  font-family: Nunito;
+  font-family: ${fonts.SecundaryTypography};
   font-size: 1.2rem;
   padding: 12px 35px;
   border-radius: 100px;
