@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled, { css, keyframes } from "styled-components"
+import { fonts } from '../../../assets/fonts/fontsHandler';
 
 const animateButton = keyframes`
   0% {
@@ -93,7 +94,7 @@ export const Item = styled.li`
 export const ItemLink = styled(Link)`
   color: ${(props) => (props.$active ? "white" : "#ffffffb3")};
   text-shadow: ${(props) => (props.$active ? "0 0 10px white" : "none")};
-  font-family: Nunito;
+  font-family: ${fonts.SecundaryTypography};
   font-size: .9rem;
   font-weight: bold;
   text-align: center;
