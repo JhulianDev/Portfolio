@@ -176,8 +176,8 @@ export const InfoIcon = styled.span`
   font-family: ${fonts.SecundaryTypography};
   font-size: .9rem;
   text-align: center;
-  text-shadow: 0 0 10px white;
-  box-shadow: 0 0 5px #ffffff4b;
+  text-shadow: 0 0 5px white;
+  box-shadow: 0 0 4px #ffffff75;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,11 +191,6 @@ export const InfoIcon = styled.span`
 
   @media screen and (max-width: 820px){
     display: flex;
-  }
-
-  &:active{
-    background-color: red;
-    
   }
 `
 
