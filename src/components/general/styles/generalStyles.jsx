@@ -4,7 +4,7 @@ import { colors } from "../../../assets/colors/Colors"
 export const Section = styled.section`
   width: 100%;
   min-height: 100vh;
-  padding: 60px 120px;
+  padding: 60px;
   position: relative;
   overflow: hidden;
   gap: 20px;
@@ -24,12 +24,24 @@ export const Section = styled.section`
 `
 
 export const MaxWidth = styled.div`
-  max-width: 1400px;
+  max-width: 1380px;
   width: 100%;
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: ${(props) => props.$justify || "space-between"} ;
+  justify-content: ${(props) => props.$justify || "space-between"};
+
+  @media screen and (max-width: 1800px){
+    max-width: 1200px;
+  }
+
+  @media screen and (max-width: 1440px){
+    max-width: 1030px;
+  }
+
+  @media screen and (max-width: 1180px){
+    max-width: 850px;
+  }
 
   @media screen and (max-width: 820px){
     flex-direction: column;
@@ -59,7 +71,11 @@ export const Light = styled.span`
   top: ${(props) => props.$top ? `calc(-${props.$size} / 2)` : ""};
   bottom: ${(props) => props.$bottom ? `calc(-${props.$size} / 2)` : ""};
 
-  @media screen and (max-width: 1550px){
+  @media screen and (max-width: 1800px){
+    transform: scale(.8);
+  }
+
+  @media screen and (max-width: 1440px){
     transform: scale(.7);
   }
   
@@ -68,7 +84,7 @@ export const Light = styled.span`
   }
 
   @media screen and (max-width: 425px){
-    transform: scale(.5);
+    transform: ${(props) => props.$mobile ? "scale(.6)" : "scale(.5)"};
     opacity: .3;
   }
 `

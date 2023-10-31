@@ -10,6 +10,11 @@ const lightStyles = css`
   filter: blur(80px);
   position: absolute;
 
+  @media screen and (max-width: 1800px){
+    width: 185px;
+    height: 185px;
+  }
+
   @media screen and (max-width: 1440px){
     width: 170px;
     height: 170px;
@@ -44,6 +49,11 @@ export const BoxIcon = styled.a`
     box-shadow: 0 0 20px #ffffff4b;
   }
 
+  @media screen and (max-width: 1800px){
+    width: 27px;
+    height: 27px;
+  }
+
   @media screen and (max-width: 1440px){
     width: 25px;
     height: 25px;
@@ -76,6 +86,10 @@ export const Title = styled.h1`
   font-size: 1.3rem;
   font-weight: 500;
 
+  @media screen and (max-width: 1800px){
+    font-size: 1.2rem;
+  }
+
   @media screen and (max-width: 1440px){
     font-size: 1.1rem;
   }
@@ -87,6 +101,10 @@ export const Subtitle = styled.h2`
   font-weight: 500;
 
   @media screen and (max-width: 1440px){
+    font-size: 1.1rem;
+  }
+
+  @media screen and (max-width: 1440px){
     font-size: 1rem;
   }
 `
@@ -96,6 +114,10 @@ export const Description = styled.p`
   font-size: 1rem;
   margin-top: 5px;
   font-weight: lighter;
+
+  @media screen and (max-width: 1440px){
+    font-size: .9rem;
+  }
 
   @media screen and (max-width: 1440px){
     font-size: .8rem;
@@ -132,8 +154,13 @@ export const LinkProyect = styled.a`
     box-shadow: 0 0 10px #ffffff4b;
   }
 
-  @media screen and (max-width: 1440px){
+  @media screen and (max-width: 1800px){
+    padding: 8px;
     margin-top: 10px;
+  }
+
+  @media screen and (max-width: 1440px){
+    font-size: .8rem;
   }
 
   @media screen and (max-width: 1080px){
@@ -192,6 +219,10 @@ export const CardBox = styled.div`
   overflow: hidden;
   z-index: 1;
 
+  @media screen and (max-width: 1800px){
+    height: 300px;
+  }
+
   @media screen and (max-width: 1440px){
     height: 260px;
   }
@@ -210,8 +241,16 @@ export const CardBox = styled.div`
     & ${Logo} {
       margin-bottom: 10px;
 
+      @media screen and (max-width: 1800px){
+        width: 60%;
+      }
+
       @media screen and (max-width: 1440px){
-        margin-bottom: 10px;
+        width: 55%;
+      }
+
+      @media screen and (max-width: 820px){
+        width: 70%;
       }
     }
 

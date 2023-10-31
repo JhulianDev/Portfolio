@@ -25,6 +25,11 @@ const inputStyles = css`
     border: 1px solid white;
   }
 
+  @media screen and (max-width: 1800px){
+    font-size: .8rem;
+    padding: 10px 15px;
+  }
+
   @media screen and (max-width: 1440px){
     font-size: .8rem;
     padding: 8px 15px;
@@ -104,8 +109,8 @@ export const StarsImg = styled.img`
   animation: ${Flicker} 6s ease-in-out infinite;
   animation-delay: ${(props) => props.$delay || "1s"};
 
-  @media screen and (max-width: 820px){
-    display: none;
+  @media screen and (max-width: 425px){
+    transform: scale(1.2);
   }
 `
 
@@ -119,6 +124,12 @@ export const Form = styled.form`
   border-left: 1px solid #ffffff92;
   padding: 40px;
   gap: 20px;
+
+  @media screen and (max-width: 1800px){
+    aspect-ratio: initial;
+    padding: 35px;
+    gap: 15px;
+  }
 
   @media screen and (max-width: 1440px){
     aspect-ratio: initial;
@@ -184,6 +195,12 @@ export const TitleSection = styled.h1`
   text-align: center;
   margin-bottom: 40px;
   margin-top: -100px;
+
+  @media screen and (max-width: 1800px){
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    margin-top: -85px;
+  }
 
   @media screen and (max-width: 1440px){
     font-size: 2.3rem;

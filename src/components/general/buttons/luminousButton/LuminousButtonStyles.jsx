@@ -35,6 +35,11 @@ export const BoxButton = styled.button`
   ${(props) => props.$active && css`
     text-shadow: 0 0 10px white;
     box-shadow: 0 0 10px #ffffffea;
+
+    @media screen and (max-width: 425px) {
+      text-shadow: 0 0 8px #ffffffd1;
+      box-shadow: 0 0 8px #ffffff94;
+    }
   `}
 
   ${(props) => props.$active && css`
@@ -124,4 +129,8 @@ export const LightButton = styled.span`
         bottom: -12px;
       `
         : ""}
+
+  @media screen and (max-width: 425px){
+    opacity: .28;
+  }
 `

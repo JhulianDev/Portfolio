@@ -11,6 +11,10 @@ const titleStyles = css`
   font-weight: 100;
   line-height: 2.9rem;
 
+  @media screen and (max-width: 1800px){
+    line-height: 2.5rem;
+  }
+
   @media screen and (max-width: 1440px){
     line-height: 2.2rem;
   }
@@ -45,11 +49,17 @@ const moonStyles = css`
   right: 280px;
   top: 0;
 
+  @media screen and (max-width: 1800px){
+    width: 180px;
+    height: 180px;
+    right: 260px;
+    top: 20px;
+  }
+
   @media screen and (max-width: 1440px){
     width: 160px;
     height: 160px;
     right: 200px;
-    top: 20px;
   }
 
   @media screen and (max-width: 1080px){
@@ -69,40 +79,6 @@ const moonStyles = css`
   }
 `
 
-export const Section = styled.section`
-  background-color: #16093D;
-  width: 100%;
-  min-height: 100vh;
-  padding: 0px 120px;
-  position: relative;
-  overflow: hidden;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media screen and (max-width: 1080px){
-    padding: 60px 60px;
-  }
-
-  @media screen and (max-width: 425px){
-    padding: 20px 60px;
-  }
-`
-
-export const MaxWidth = styled.div`
-  max-width: 1400px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @media screen and (max-width: 820px){
-    flex-direction: column;
-    justify-content: center;
-  }
-`
-
 export const LightTurquoise = styled.span`
   background-color: ${colors.lightTurquoise};
   width: 300px;
@@ -114,12 +90,19 @@ export const LightTurquoise = styled.span`
   right: 40px;
   bottom: 130px;
 
+  @media screen and (max-width: 1800px){
+    width: 220px;
+    height: 100px;
+    right: 50px;
+    bottom: 150px;
+    filter: blur(70px);
+  }
+
   @media screen and (max-width: 1440px){
     width: 250px;
     height: 100px;
     right: 15px;
     bottom: 130px;
-    filter: blur(70px);
   }
 
   @media screen and (max-width: 1080px){
@@ -182,9 +165,16 @@ export const Description = styled.p`
   ${paragraphStyles}
   font-size: 2vw;
   line-height: 2.5rem;
+  max-width: 700px;
+
+  @media screen and (max-width: 1800px){
+    line-height: 2.2rem;
+    max-width: 600px;
+  }
 
   @media screen and (max-width: 1440px){
     line-height: 1.9rem;
+    max-width: 500px;
   }
 
   @media screen and (max-width: 1080px){
@@ -229,6 +219,10 @@ export const LinkButton = styled(Link)`
     background-color: #7b1ab8;
   }
 
+  @media screen and (max-width: 1800px){
+    margin-top: 8px;
+  }
+
   @media screen and (max-width: 1440px){
     font-size: 1.1rem;
     margin-top: 5px;
@@ -262,6 +256,10 @@ export const AstronautImg = styled.img`
   animation: ${levitate} 4s ease-in-out infinite;
   z-index: 5;
 
+  @media screen and (max-width: 1800px){
+    width: 400px;
+  }
+
   @media screen and (max-width: 1440px){
     width: 350px;
   }
@@ -283,6 +281,12 @@ export const StarsImg = styled.img`
   top: 16px;
   margin-top: -90px;
   mix-blend-mode: screen;
+
+  @media screen and (max-width: 1800px){
+    width: 260px;
+    right: 215px;
+    top: 50px;
+  }
 
   @media screen and (max-width: 1440px){
     width: 240px;

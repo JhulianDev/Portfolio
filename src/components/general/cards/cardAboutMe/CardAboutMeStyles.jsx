@@ -16,7 +16,11 @@ export const CardBox = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media screen and (max-width: 1540px){
+  @media screen and (max-width: 1800px){
+    width: 350px;
+  }
+
+  @media screen and (max-width: 1440px){
     width: 300px;
     padding: 37px;
   }
@@ -49,7 +53,11 @@ export const Description = styled.p`
   line-height: 130%;
   color: white;
 
-  @media screen and (max-width: 1540px){
+  @media screen and (max-width: 1800px){
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 1440px){
     font-size: .85rem;
   }
 

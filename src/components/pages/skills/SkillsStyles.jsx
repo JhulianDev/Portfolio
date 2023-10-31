@@ -45,9 +45,14 @@ export const TitleSection = styled.h1`
   text-align: center;
   margin-top: -30px;
 
+  @media screen and (max-width: 1800px){
+    font-size: 2.8rem;
+    margin-top: -50px;
+  }
+
   @media screen and (max-width: 1440px){
     font-size: 2.3rem;
-    margin-top: -25px;
+    margin-top: -45px;
     margin-bottom: -10px;
   }
 
@@ -79,6 +84,11 @@ export const LightTurquoiseCentral = styled.span`
     filter: blur(50px);
     width: 40%;
   }
+
+  @media screen and (max-width: 425px){
+    filter: blur(80px);
+    width: 39%;
+  }
 `
 
 
@@ -86,6 +96,10 @@ export const BoxIllustrations = styled.div`
   width: 700px;
   aspect-ratio: 1 / 1;
   position: relative;
+
+  @media screen and (max-width: 1800px){
+    width: 500px;
+  }
 
   @media screen and (max-width: 1440px){
     width: 400px;
@@ -156,6 +170,11 @@ export const ContainerIcons = styled.div`
   justify-content: space-between;
   position: relative;
   overflow: hidden;
+
+  @media screen and (max-width: 1800px){
+    width: 115px;
+    height: 450px;
+  }
 
   @media screen and (max-width: 1440px){
     width: 110px;
@@ -246,4 +265,22 @@ export const LightBoxIcons = styled.span`
       `
       : ""}
   z-index: -1;
+
+  @media screen and (max-width: 820px){
+    width: 280px;
+    height: 50px;
+    opacity: 0.3;
+
+    ${(props) => 
+    props.$position === "top" ?
+      `
+        left: -90px;
+      `
+      :
+      props.$position === "bottom" ?
+      `
+        right: -90px;
+      `
+      : ""}
+  }
 `

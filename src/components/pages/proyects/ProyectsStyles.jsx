@@ -10,6 +10,10 @@ export const TitleSection = styled.h1`
   margin-bottom: 40px;
   margin-top: -100px;
 
+  @media screen and (max-width: 1800px){
+    font-size: 2.8rem;
+  }
+
   @media screen and (max-width: 1440px){
     font-size: 2.3rem;
     margin-bottom: 30px;

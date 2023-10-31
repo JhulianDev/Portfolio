@@ -133,6 +133,7 @@ export const ItemLink = styled(Link)`
   `}
 
   @media screen and (max-width: 820px){
+    pointer-events: ${(props) => (props.$open ? "auto" : "none")};
     padding-top: 9px;
     width: 100%;
   }
@@ -214,6 +215,7 @@ export const ButtonRedirect = styled(Link)`
   }
 
   @media screen and (max-width: 820px){
+    pointer-events: ${(props) => (props.$open ? "auto" : "none")};
     display: ${(props) => props.$mobile ? "flex" : "flex"};
     width: 130px;
     gap: 2px;

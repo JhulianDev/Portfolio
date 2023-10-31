@@ -34,7 +34,7 @@ const Header = () => {
           <List>
             {refSections.map((section) => (
               <Item key={section.name}>
-                <ItemLink $active={section.id === sectionActive} onClick={() => handleNav(section.ref, section.id)}>
+                <ItemLink $open={openNav} $active={section.id === sectionActive} onClick={() => handleNav(section.ref, section.id)}>
                   {section.name}
                 </ItemLink>
               </Item>
@@ -44,12 +44,12 @@ const Header = () => {
 
         <BoxRedirects>
 
-          <ButtonRedirect to="https://github.com/JhulianDev" target="_blank">
+          <ButtonRedirect $open={openNav} to="https://github.com/JhulianDev" target="_blank">
             <DownloadText>GitHub</DownloadText>
             <GitHubIcon src={GITHUB_ICON} alt='GitHub Icon' />
           </ButtonRedirect>
 
-          <ButtonRedirect to="https://linkedin.com/in/jhuliandev/" target="_blank" $mobile>
+          <ButtonRedirect $open={openNav} to="https://linkedin.com/in/jhuliandev/" target="_blank" $mobile>
             <DownloadText>LinkedIn</DownloadText>
             <GitHubIcon src={LINKEDIN_ICON} alt='LinkedIn Icon' />
           </ButtonRedirect>

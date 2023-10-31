@@ -10,7 +10,12 @@ export const TitleSection = styled.h1`
   margin-bottom: 40px;
   margin-top: -100px;
 
-  @media screen and (max-width: 1540px){
+  @media screen and (max-width: 1800px){
+    font-size: 2.8rem;
+    margin-top: -80px;
+  }
+
+  @media screen and (max-width: 1440px){
     font-size: 2.3rem;
     margin-bottom: 20px;
     margin-top: -70px;
@@ -40,7 +45,11 @@ export const CardPortrait = styled.img`
   width: 414px;
   backdrop-filter: blur(3px);
 
-  @media screen and (max-width: 1540px){
+  @media screen and (max-width: 1800px){
+    width: 350px;
+  }
+
+  @media screen and (max-width: 1440px){
     width: 300px;
   }
 

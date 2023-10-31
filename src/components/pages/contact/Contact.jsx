@@ -32,18 +32,18 @@ const Contact = () => {
       <MaxWidth $justify="center">
 
         <CardContact>
-          <Light $size="200px" $top $right $turquoise $opacity=".7" />
+          <Light $size="200px" $top $right $turquoise $opacity=".7" $mobile />
 
           <BoxImg>
             <AstronautImg src={ASTRONAUT_CONTACT} alt='Astronaut Illustration' />
             <StarsImg src={STARS_A} alt='Stars Illustration' $delay="1s" />
             <StarsImg src={STARS_B} alt='Stars Illustration' $delay="3s" />
             <StarsImg src={STARS_C} alt='Stars Illustration' $delay="5s" />
-            <Light $size="200px" $turquoise />
+            <Light $size="200px" $turquoise $mobile />
           </BoxImg>
 
           <Form onSubmit={(e) => formHandler(e, formData, handleSubmit, t)} noValidate>
-            <Light $size="200px" $bottom $blue />
+            <Light $size="200px" $bottom $blue $mobile />
             <Input type="text" name="name" placeholder={t.name} value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
             <Input type="email" name="email" placeholder={t.email} value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
             <Input type="text" name="country" placeholder={t.country} value={formData.country} onChange={(e) => setFormData({ ...formData, country: e.target.value })} />
@@ -54,7 +54,7 @@ const Contact = () => {
             </ButtonForm>
           </Form>
 
-          <Light $size="200px" $bottom $left $purple $opacity=".7" />
+          <Light $size="200px" $bottom $left $purple $opacity=".7" $mobile />
         </CardContact>
 
       </MaxWidth>
