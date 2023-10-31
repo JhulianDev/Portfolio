@@ -36,12 +36,12 @@ const useFormHandler = () => {
   }
 
   // Funcion en caso de envio exitoso:
-  const submittedForm = (setFormData) => {
+  const submittedForm = (setFormData, t) => {
     // Se muestra alerta de exito
     Swal.fire({
       icon: "success",
       title: `${t.alerts.success}`,
-      text: `${t.alerts.succesText}`,
+      text: `${t.alerts.successText}`,
       showConfirmButton: false,
       timer: 2000
     });

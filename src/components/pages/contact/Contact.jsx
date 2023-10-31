@@ -20,7 +20,7 @@ const Contact = () => {
 
   useEffect(() => {
     if (state.succeeded) {
-      submittedForm(setFormData);
+      submittedForm(setFormData, t);
     }
   }, [state.succeeded]);
 
