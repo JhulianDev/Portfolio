@@ -63,7 +63,7 @@ export const texts_es = {
   },
   aboutMe: {
     titleSection: "Sobre mi",
-    descriptionA: "¡Hola! Mi nombre es Jhulian Mérida, desarrollador FullStack con base en Argentina. Me apasiona crear interfaces estéticamente atractivas y funcionales que brinden soluciones efectivas. De forma constante amplío mis conocimientos con nuevas tecnologías con el objetivo de mejorar mi stack de habilidades y, en un futuro cercano, transmitir mis conocimientos a nuevos desarrolladores.",
+    descriptionA: "¡Hola! Mi nombre es Jhulian Mérida, desarrollador FullStack con base en Argentina. Me apasiona crear interfaces atractivas y funcionales que brinden soluciones efectivas. De forma constante amplío mis conocimientos con nuevas tecnologías con el objetivo de mejorar mi stack de habilidades y, en un futuro cercano, transmitir mis conocimientos a nuevos Devs.",
     descriptionB: "Durante los últimos 1.2 años, he tenido la oportunidad de trabajar en una agencia de branding, donde mi papel principal ha sido la creación y gestión de la Aplicacion Web de la agencia. Pasando desde una Landing Page informativa a su evolución actual de una tienda online con backend, base de datos, procesadores de pago y sistema de Login."
   },
   contactMe: {
