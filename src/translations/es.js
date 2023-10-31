@@ -77,7 +77,7 @@ export const texts_es = {
     send: "Enviar",
     alerts: {
       success: "Éxito!",
-      succesText: "Su mensaje fue enviado",
+      successText: "Su mensaje fue enviado",
       error: "Atención",
       mandatoryText: "Todos los campos son obligatorios",
       invalidMail: "El correo ingresado no es válido",
