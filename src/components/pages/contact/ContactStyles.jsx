@@ -15,6 +15,7 @@ const inputStyles = css`
   padding: 13px 15px;
   outline: none;
   transition: border 1s ease;
+  z-index: 10;
 
   &::placeholder{
     font-weight: 400;

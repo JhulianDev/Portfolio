@@ -46,10 +46,12 @@ export const HeaderContainer = styled.header`
     gap: 20px;
     overflow: hidden;
     transition: all .3s ease;
+    z-index: -1;
 
     ${props => props.$open && css`
       width: 95%;
       opacity: 1;
+      z-index: 10;
     `}
   }
 `
