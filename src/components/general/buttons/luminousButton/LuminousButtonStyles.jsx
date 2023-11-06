@@ -71,6 +71,11 @@ ${(props) => props.$active && css`
       @media screen and (max-width: 580px){
         width: 87px;
       }
+
+      @media screen and (max-width: 425px){
+        width: 78px;
+        height: 31px;
+      }
     }
   `}
 
@@ -80,6 +85,11 @@ ${(props) => props.$active && css`
 
   @media screen and (max-width: 580px){
     width: 90px;
+  }
+
+  @media screen and (max-width: 425px){
+    width: 80px;
+    height: 34px;
   }
 `
 
