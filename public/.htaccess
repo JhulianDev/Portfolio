@@ -1,7 +1,13 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  RewriteRule ^index\.html$ - [L]
+
+  # Redirección para quitar "www." y forzar HTTPS
+  RewriteCond %{HTTP_HOST} ^www\.jhuliandev\.com$ [NC,OR]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://jhuliandev.com/$1 [L,R=301]
+
+  # Reglas de reescritura para redirigir todas las demás solicitudes a index.html
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
